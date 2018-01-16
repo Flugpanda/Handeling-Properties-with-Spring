@@ -9,17 +9,14 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import com.tutorial.spring.properties.external.FakeDataSource;
 
 /**
- * Java based configuration to tell spring how to load and map the properties 
+ * Java based configuration to tell spring to load the properties from the application.yml file
  * 
  * @author Bastian Bräunel
  *
  */
 @Configuration
-@PropertySource("classpath:datasource.properties")
 public class ExternalPropertyConfig {
 
-	// "${}" spring expression language
-	// get the value out of the spring context
 	@Value("${external.username}")
 	private String user;
 	
