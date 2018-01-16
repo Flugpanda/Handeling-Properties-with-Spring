@@ -25,7 +25,7 @@ public class ConstructorInjectedController {
 	 * @param greetringService	will be injected by the spring framework
 	 * @Qualifier("contructorGreetringService")		this tells spring to prioritize the ContructorGreetringService, instead of the other classes that implement IGreetingService
 	 */
-	public ConstructorInjectedController(@Qualifier("contructorGreetringService") IGreetingService greetringService) {
+	public ConstructorInjectedController(IGreetingService greetringService) {
 		this.greetringService = greetringService;
 	}
 	
