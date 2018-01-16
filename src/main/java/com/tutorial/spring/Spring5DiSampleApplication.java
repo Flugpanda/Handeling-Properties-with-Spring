@@ -8,6 +8,7 @@ import com.tutorial.spring.controllers.ConstructorInjectedController;
 import com.tutorial.spring.controllers.MyController;
 import com.tutorial.spring.controllers.PropertyInjectedController;
 import com.tutorial.spring.controllers.SetterInjectedController;
+import com.tutorial.spring.properties.external.FakeDataSource;
 
 @SpringBootApplication
 public class Spring5DiSampleApplication {
@@ -19,17 +20,7 @@ public class Spring5DiSampleApplication {
 		// getting an instance of a MyController-Bean from the spring context
 		MyController controller = (MyController) context.getBean(MyController.class);
 				
-//		PrimaryGreeting
-		System.out.println(controller.sayHello());
-
-//		 PropertyInjectedController
-		System.out.println(context.getBean(PropertyInjectedController.class).sayHello() + " - PropertyInjectedController");
-		
-//		 SetterInjectedController
-		System.out.println(context.getBean(SetterInjectedController.class).sayHello() + " - SetterInjectedController");
-		
-//		 ConstructorInjectedController
-		System.out.println(context.getBean(ConstructorInjectedController.class).sayHello() + " - ConstructorInjectedController");
-		
+		FakeDataSource dataSource = (FakeDataSource) context.getBean(FakeDataSource.class);
+		System.out.println(dataSource.toString());
 	}
 }
