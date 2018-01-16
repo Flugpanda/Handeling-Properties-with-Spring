@@ -9,6 +9,7 @@ import com.tutorial.spring.controllers.MyController;
 import com.tutorial.spring.controllers.PropertyInjectedController;
 import com.tutorial.spring.controllers.SetterInjectedController;
 import com.tutorial.spring.properties.external.FakeDataSource;
+import com.tutorial.spring.properties.external.FakeJmsBroker;
 
 @SpringBootApplication
 public class Spring5DiSampleApplication {
@@ -22,5 +23,8 @@ public class Spring5DiSampleApplication {
 				
 		FakeDataSource dataSource = (FakeDataSource) context.getBean(FakeDataSource.class);
 		System.out.println(dataSource.toString());
+		
+		FakeJmsBroker jmsBroker = (FakeJmsBroker) context.getBean(FakeJmsBroker.class);
+		System.out.println(jmsBroker.toString());
 	}
 }
