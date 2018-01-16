@@ -1,0 +1,32 @@
+name: Bob
+
+names: # some comments
+    - Hans
+    - Peter
+    - Christian
+
+person:
+    firstname: Hans
+    lastname: Heiner
+   
+# Boolean values true
+truthe: yes
+another_truth: True
+
+# Boolean values false
+false: false
+no: no
+
+# String
+text: "What ever you say ..."
+
+# Include new lines
+include_new_lines: |
+    asdf asdf asdf
+    asdf yxcv yxcvbnmm
+    asdf er qwert
+    
+#ignore new lines:
+ignore_new_lines: >
+      this is
+      just one line

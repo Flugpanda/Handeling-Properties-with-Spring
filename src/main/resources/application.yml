@@ -1,0 +1,4 @@
+external:
+  username:  foo
+  password:  bar
+  url: abcdefghijklmnopqrstuvwxyz
