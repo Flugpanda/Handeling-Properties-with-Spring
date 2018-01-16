@@ -9,13 +9,13 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import com.tutorial.spring.properties.external.FakeDataSource;
 
 /**
- * Java based configuration to tell spring how to load and map the properties 
+ * Java based configuration to tell spring to load the properties from
+ * the default application.properties
  * 
  * @author Bastian Bräunel
  *
  */
 @Configuration
-@PropertySource("classpath:datasource.properties")
 public class ExternalPropertyConfig {
 
 	// "${}" spring expression language
